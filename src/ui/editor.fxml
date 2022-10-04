@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="background" prefHeight="600.0" prefWidth="1000.0" stylesheets="@editor.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controller.EditorController">
+   <children>
+      <SplitPane fx:id="splitPane" dividerPositions="0.5" prefHeight="600.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane fx:id="leftPane" minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="500.0">
+               <children>
+                  <SplitPane dividerPositions="0.8" layoutX="-2.0" layoutY="-1.0" orientation="VERTICAL" prefHeight="600.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <Button fx:id="runButton" mnemonicParsing="false" onAction="#runButtonClicked" prefHeight="25.0" prefWidth="25.0" stylesheets="@editor.css" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0" />
+                              <TextArea fx:id="editorTextArea" prefHeight="570.0" prefWidth="495.0" stylesheets="@editor.css" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="30.0">
+                                 <font>
+                                    <Font name="Courier New Bold" size="14.0" />
+                                 </font></TextArea>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <TextArea fx:id="consoleTextArea" editable="false" prefHeight="120.0" prefWidth="495.0" stylesheets="@editor.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                                 <font>
+                                    <Font name="Courier New Bold" size="14.0" />
+                                 </font></TextArea>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane fx:id="rightPane" prefHeight="600.0" prefWidth="500.0">
+<!--               <children>-->
+<!--                  <ImageView fx:id="outputImageView" fitHeight="600.0" fitWidth="495.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0" />-->
+<!--               </children>-->
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

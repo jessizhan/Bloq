@@ -1,0 +1,29 @@
+canvas: 100, 100
+
+watershape:
+001;
+010;
+100;
+
+lavax: 10
+
+define draw(x,y){
+    block: water
+    start: x, 10
+    shape: watershape
+
+    block: lava
+    start: lavax, y
+    shape:
+    11;
+    01;
+
+    block: land
+    start: 10, 10
+}
+
+for i : 1 to 10 {
+    if (i % 2 == 1) {
+        call draw(i, i)
+    }
+}
